@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"net/url"
 	"os/exec"
 
@@ -16,24 +15,25 @@ func Lynx(ctx *fasthttp.RequestCtx) {
 	urlparsed, err := url.QueryUnescape(urlstring)
 
 	if err != nil {
-		log.Fatal(err)
-		return
+		message := []byte(fmt.Sprintf("Error: %s\n", err))
+		ctx.Response.SetBody(message)
+		ctx.Response.SetStatusCode(500)
 	}
 
-	// urlparsedstring := urlparsed.string()
 	fmt.Fprintf(ctx, "URL: %s\n", urlparsed)
 
 	cmd := exec.Command("lynx", "--dump", urlparsed)
 	stdout, err := cmd.Output()
 
 	if err != nil {
-		log.Fatal(err)
-		return
+		message := []byte(fmt.Sprintf("Error: %s\n", err))
+		ctx.Response.SetBody(message)
+		ctx.Response.SetStatusCode(500)
 	}
 
 	// ctx.Response.Header.Set("X-My-Header", "my-header-value")
 	ctx.SetContentType("text/plain; charset=utf8")
-	// ctx.Response.StatusCode()
+	ctx.Response.SetStatusCode(200)
 	ctx.Response.SetBody(stdout)
 	// ctx.Response.SetBody(stdout)
 	// fmt.Fprintf(ctx, "%s\n", stdout)
@@ -42,5 +42,6 @@ func Lynx(ctx *fasthttp.RequestCtx) {
 func main() {
 	r := router.New()
 	r.GET("/free-riding/{url:*}", Lynx)
-	log.Fatal(fasthttp.ListenAndServe(":8080", r.Handler))
+	// log.Fatal(fasthttp.ListenAndServe(":8080", r.Handler))
+	fasthttp.ListenAndServe(":8080", r.Handler)
 }

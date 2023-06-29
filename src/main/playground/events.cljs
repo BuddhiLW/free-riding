@@ -1,7 +1,11 @@
 (ns playground.events
   (:require
+   [ajax.core :as ajax :refer [GET POST]]
+   [day8.re-frame.http-fx]
    [playground.db :refer [db]]
    [re-frame.core :as rf]))
+
+(def lynx-endpoint "http://localhost:8080")
 
 (rf/reg-event-db
  :prod/inicialize-db
@@ -10,3 +14,36 @@
  (fn [_ _]
    @db))  ;; [{:keys [local-store-user]} _]
    ;; {:db (assoc initial-app-db :auth local-store-user)}
+
+(rf/reg-event-fx
+ :article/fetch-url
+ (fn [{:keys [db]} [_ {:keys [url]}]]
+   (js/console.log "fetching url: " (str lynx-endpoint "/free-riding/" (js/encodeURIComponent url)))
+   {:db (assoc-in db [:article :url] url)
+    :http-xhrio {:method          :get
+                 :uri             (str lynx-endpoint "/free-riding/" (js/encodeURIComponent url))
+                 :timeout          8000
+                 :response-format (ajax/text-response-format)
+                 :on-success      [:article/set-text]
+                 :on-failure      [:error/endpoint-request :get-article]}}))
+
+(rf/reg-event-db
+ :article/set-text
+ (fn [db [_ response]]
+   (js/console.log "response: " response)
+   (assoc-in db [:article :text] response)))
+
+(rf/reg-event-db
+ :error/endpoint-request
+ (fn [db [_ request-type response]]
+   (js/console.error "error: " request-type ": " response)
+   (-> db
+       (assoc-in [:errors request-type] (get response :status-text)))))
+
+(defn handler [response]
+  (.log js/console (str response)))
+(js->clj
+ (GET (str "http://localhost:8080/free-riding/" (js/encodeURIComponent "https://davidbacisin.com/writing/using-fasthttp-for-api-requests-golang"))
+   {:handler handler}))
+;; :error-handler handler
+;; :response-format (ajax/json-response-format {:keywords? true})}))

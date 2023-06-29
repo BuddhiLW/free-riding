@@ -14,7 +14,6 @@
 (defn form-group
   [{:keys [id label type values  & not-deref? text-area? on-key-down]}]
   [:> FormControl {:full-width true}
-                   ;; :component "form"}
    [:> Grid {:container true
              :display "flex"
              :flex-direction "column"}

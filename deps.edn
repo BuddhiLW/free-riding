@@ -6,22 +6,22 @@
         thheller/shadow-cljs {:mvn/version "2.20.2"}
         re-frame/re-frame {:mvn/version "1.3.0"}
         day8.re-frame/http-fx {:mvn/version "0.2.4"}
+        cljs-ajax/cljs-ajax {:mvn/version "0.8.4"}
 
         ;; ----- Not needed right now -----
         ;; bidi/bidi {:mvn/version "2.1.6"}
         ;; kibu/pushy {:mvn/version "0.3.8"}
 
         ;; ----- Probably never needed -----
-        ;; cljs-ajax/cljs-ajax {:mvn/version "0.8.4"}
         ;; com.andrewmcveigh/cljs-time {:mvn/version "0.5.2"}
 
         ;; Dev deps
         binaryage/devtools {:mvn/version "1.0.7"}
-        org.clojars.ertucetin/re-frame-flow {:mvn/version "0.1.4"}
-        re-frisk/re-frisk {:mvn/version "1.6.0"}
-        day8.re-frame/re-frame-10x {:mvn/version "1.3.0"}
-        day8.re-frame/tracing {:mvn/version "0.6.2"}
-        day8.re-frame/tracing-stubs {:mvn/version "0.5.3"}}
+        ;; org.clojars.ertucetin/re-frame-flow {:mvn/version "0.1.4"}
+        ;; re-frisk/re-frisk {:mvn/version "1.6.0"}
+        day8.re-frame/re-frame-10x {:mvn/version "1.3.0"}}
+        ;; day8.re-frame/tracing {:mvn/version "0.6.2"}
+        ;; day8.re-frame/tracing-stubs {:mvn/version "0.5.3"}}
 
  :aliases {:outdated {:extra-deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
                       :main-opts ["-m" "antq.core"]}}}

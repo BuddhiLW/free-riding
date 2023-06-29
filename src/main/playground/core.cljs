@@ -1,7 +1,7 @@
 (ns playground.core
   (:require
-   ["@mui/material" :refer [Box Card colors FormControl Grid
-                            Typography]]
+   ["@mui/material" :refer [Box Card colors Grid
+                            Typography Button]]
    [goog.dom :as gdom]
    [playground.db]
    [playground.events]
@@ -36,28 +36,45 @@
         initial-values {:url url}
         values (r/atom initial-values)]
     (fn []
-      [:<>
-       [:> Typography {:variant "h4"
-                       :align "center"
-                       :my 2}
-        "Upload File Example"]
-       [:> Grid
-        {:container true
-         :sx {:width "50vw"
-              :margin "auto"
-              :mb "10px"}}
-        [form-group {:id :first-name
-                     :label "Website url:"
-                     :type "text"
-                     :values values}]]
-       [:> Card {:sx {:width "60vw"
-                      :height "60vh"
-                      :margin "auto"}}
-        [:> Grid {:container true
-                  :direction "column"
-                  :align-items "center"
-                  :justify-content "center"}
-         [title]]]])))
+      (let [text @(rf/subscribe [:article/text])]
+        [:<>
+         [:> Typography {:variant "h4"
+                         :align "center"
+                         :my 2}
+          "Free your pay-wall"]
+         [:> Grid
+          {:container true
+           :sx {:width "50vw"
+                :margin "auto"
+                :mb "2em"}}
+          [form-group {:id :url
+                       :label "Website url:"
+                       :type "text"
+                       :values values}]
+          [:> Button {:variant "contained"
+                      :color "primary"
+                      :onClick #(rf/dispatch [:article/fetch-url @values])}
+           "Fetch article"]]
+
+         [title]
+         [:> Card {:sx {:width "60vw"
+                        :height "60vh"
+                        :margin "auto"
+                        :mb "2em"
+                        :inline-size "50vw"
+                        :overflow-wrap "break-word"
+                        :overflow-y "scroll"}
+                   :class-name "overflow-hidden overflow-y-auto"}
+
+          [:> Grid {:container true
+                    :direction "column"
+                    :align-items "center"
+                    :justify-content "center"
+                    :sx {:mb "10em"}}
+           [:> Box {:sx {:inline-size "45vw"
+                         :word-break "break-all"}}
+            [:pre
+             text]]]]]))))
 
 (defn- main []
   [:main.container.mx-auto.pt-5

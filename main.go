@@ -11,19 +11,32 @@ import (
 )
 
 func Lynx(ctx *fasthttp.RequestCtx) {
+	ctx.Response.Header.Set("Access-Control-Allow-Origin", "*")
 	var urlstring string = ctx.UserValue("url").(string)
-	urlparsed, err := url.Parse(urlstring)
-	urlparsedstring := urlparsed.String()
-	fmt.Fprintf(ctx, "URL: %s\n", urlparsedstring)
+	urlparsed, err := url.QueryUnescape(urlstring)
 
-	cmd := exec.Command("lynx", "--dump", urlparsedstring)
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+
+	// urlparsedstring := urlparsed.string()
+	fmt.Fprintf(ctx, "URL: %s\n", urlparsed)
+
+	cmd := exec.Command("lynx", "--dump", urlparsed)
 	stdout, err := cmd.Output()
 
 	if err != nil {
 		log.Fatal(err)
 		return
 	}
-	fmt.Fprintf(ctx, "%s\n", stdout)
+
+	// ctx.Response.Header.Set("X-My-Header", "my-header-value")
+	ctx.SetContentType("text/plain; charset=utf8")
+	// ctx.Response.StatusCode()
+	ctx.Response.SetBody(stdout)
+	// ctx.Response.SetBody(stdout)
+	// fmt.Fprintf(ctx, "%s\n", stdout)
 }
 
 func main() {

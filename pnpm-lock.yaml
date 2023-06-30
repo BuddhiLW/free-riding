@@ -23,17 +23,11 @@ dependencies:
   '@mui/styles':
     specifier: ^5.13.2
     version: 5.13.2(react@18.2.0)
-  '@stripe/react-stripe-js':
-    specifier: ^2.1.0
-    version: 2.1.0(@stripe/stripe-js@1.53.0)(react-dom@18.2.0)(react@18.2.0)
-  '@stripe/stripe-js':
-    specifier: ^1.53.0
-    version: 1.53.0
   dagre:
     specifier: ^0.8.5
     version: 0.8.5
   highlight.js:
-    specifier: 11.5.1
+    specifier: ^11.5.1
     version: 11.5.1
   mui-file-input:
     specifier: ^2.0.0
@@ -45,7 +39,7 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   react-flow-renderer:
-    specifier: ^9.7.4
+    specifier: ^9.5.4
     version: 9.7.4(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
@@ -487,23 +481,6 @@ packages:
 
   /@popperjs/core@2.11.8:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
-    dev: false
-
-  /@stripe/react-stripe-js@2.1.0(@stripe/stripe-js@1.53.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Zb6Ycrj5QuhYkvtlvvLzo+cysUyA6wkx3zWHQ7uVnHRYRM/n1jtQD6VGBrdmptC8e8PJN6L091gBCyB5P0FqmA==}
-    peerDependencies:
-      '@stripe/stripe-js': ^1.44.1
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@stripe/stripe-js': 1.53.0
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@stripe/stripe-js@1.53.0:
-    resolution: {integrity: sha512-qhhAa5WxlgVqh1J41ppyqqQVu6S1T1Q9lDAk2Ho9eI/GjrkMvAHcJpKqhekJRsZ1vjsK4P68PYOcXBXPyNCpnQ==}
     dev: false
 
   /@types/hoist-non-react-statics@3.3.1:

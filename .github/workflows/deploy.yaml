@@ -35,9 +35,11 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
 
-      # Runs a single command using the runners shell
       - name: Install Lynx
-         run: sudo apt-get install -y lynx 
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: lynx
+          version: 1.0
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script

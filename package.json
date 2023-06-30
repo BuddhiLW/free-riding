@@ -5,8 +5,8 @@
   "scripts": {
     "shadow:watch": "yarn shadow-cljs watch app",
     "shadow:production": "yarn shadow-cljs release app",
-    "tailwind:watch": "yarn tailwindcss -i ./public/css/tailwind.css -o ./public/css/compiled.css --watch",
-    "tailwind:production": "yarn tailwindcss -i ./public/css/tailwind.css -o ./public/css/compiled.css --minify",
+    "tailwind:watch": "yarn tailwindcss -i ./docs/css/tailwind.css -o ./docs/css/compiled.css --watch",
+    "tailwind:production": "yarn tailwindcss -i ./docs/css/tailwind.css -o ./docs/css/compiled.css --minify",
     "dev": "yarn run-p -l *:watch",
     "build": "yarn shadow:production && yarn tailwind:production"
   },

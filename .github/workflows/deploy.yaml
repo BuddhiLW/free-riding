@@ -74,4 +74,3 @@ jobs:
           go-version: ${{ matrix.go }}
       - run: |
           go build
-          ./free-riding

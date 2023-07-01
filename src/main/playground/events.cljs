@@ -44,5 +44,5 @@
   (defn handler [response]
     (.log js/console (str response)))
   (js->clj
-   (GET (str "https://free-riding-paywalls.onrender.com" (js/encodeURIComponent "https://davidbacisin.com/writing/using-fasthttp-for-api-requests-golang"))
+   (GET (str lynx-endpoint (js/encodeURIComponent "https://davidbacisin.com/writing/using-fasthttp-for-api-requests-golang"))
      {:handler handler})))

@@ -18,7 +18,7 @@ yarn run shadow:watch
 Run the `go` server!
 
 ``` bash
-go run main.go
+go run ./go/main.go
 ```
 
 ## Resources

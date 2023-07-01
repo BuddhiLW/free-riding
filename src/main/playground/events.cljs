@@ -5,7 +5,7 @@
    [playground.db :refer [db]]
    [re-frame.core :as rf]))
 
-(def lynx-endpoint "http://localhost:8080")
+(def lynx-endpoint "http://localhost:8181")
 
 (rf/reg-event-db
  :prod/inicialize-db
@@ -40,10 +40,9 @@
    (-> db
        (assoc-in [:errors request-type] (get response :status-text)))))
 
-(defn handler [response]
-  (.log js/console (str response)))
-(js->clj
- (GET (str "http://localhost:8080/free-riding/" (js/encodeURIComponent "https://davidbacisin.com/writing/using-fasthttp-for-api-requests-golang"))
-   {:handler handler}))
-;; :error-handler handler
-;; :response-format (ajax/json-response-format {:keywords? true})}))
+(comment
+  (defn handler [response]
+    (.log js/console (str response)))
+  (js->clj
+   (GET (str "https://free-riding-paywalls.onrender.com" (js/encodeURIComponent "https://davidbacisin.com/writing/using-fasthttp-for-api-requests-golang"))
+     {:handler handler})))

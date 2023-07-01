@@ -8,6 +8,6 @@
 
 (def db
   (r/atom
-   {:article {:url "https://www.estadao.com.br/politica/blog-do-fausto-macedo/dia-d-julgamento-bolsonaro-inelegivel-tse-reuniao-embaixadores/"
+   {:article {:url "duckduckgo.com"
               :text ""}
     :errors []}))

@@ -43,5 +43,5 @@ func main() {
 	r := router.New()
 	r.GET("/free-riding/{url:*}", Lynx)
 	// log.Fatal(fasthttp.ListenAndServe(":8080", r.Handler))
-	fasthttp.ListenAndServe(":8080", r.Handler)
+	fasthttp.ListenAndServe(":8181", r.Handler)
 }

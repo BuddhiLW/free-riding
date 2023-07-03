@@ -14,9 +14,9 @@ return cljs.core.nth.cljs$core$IFn$_invoke$arity$2(v,(num - (1)));
  * Gets the index of all items in vec that match the predicate
  */
 day8.re_frame_10x.tools.coll.find_all_indexes_in_vec = (function day8$re_frame_10x$tools$coll$find_all_indexes_in_vec(pred,v){
-return cljs.core.keep_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__36191_SHARP_,p2__36190_SHARP_){
-if(cljs.core.truth_((pred.cljs$core$IFn$_invoke$arity$1 ? pred.cljs$core$IFn$_invoke$arity$1(p2__36190_SHARP_) : pred.call(null,p2__36190_SHARP_)))){
-return p1__36191_SHARP_;
+return cljs.core.keep_indexed.cljs$core$IFn$_invoke$arity$2((function (p1__36126_SHARP_,p2__36125_SHARP_){
+if(cljs.core.truth_((pred.cljs$core$IFn$_invoke$arity$1 ? pred.cljs$core$IFn$_invoke$arity$1(p2__36125_SHARP_) : pred.call(null,p2__36125_SHARP_)))){
+return p1__36126_SHARP_;
 } else {
 return null;
 }
@@ -32,8 +32,8 @@ return cljs.core.first(day8.re_frame_10x.tools.coll.find_all_indexes_in_vec(pred
  * Returns a transducer that filters for :id between beginning and ending.
  */
 day8.re_frame_10x.tools.coll.id_between_xf = (function day8$re_frame_10x$tools$coll$id_between_xf(beginning,ending){
-return cljs.core.filter.cljs$core$IFn$_invoke$arity$1((function (p1__36195_SHARP_){
-return (((beginning <= new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__36195_SHARP_))) && ((new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__36195_SHARP_) <= ending)));
+return cljs.core.filter.cljs$core$IFn$_invoke$arity$1((function (p1__36134_SHARP_){
+return (((beginning <= new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__36134_SHARP_))) && ((new cljs.core.Keyword(null,"id","id",-1388402092).cljs$core$IFn$_invoke$arity$1(p1__36134_SHARP_) <= ending)));
 }));
 });
 /**
@@ -41,13 +41,13 @@ return (((beginning <= new cljs.core.Keyword(null,"id","id",-1388402092).cljs$co
  *   nested structure. keys is a sequence of keys. Any empty maps that result
  *   will not be present in the new structure.
  */
-day8.re_frame_10x.tools.coll.dissoc_in = (function day8$re_frame_10x$tools$coll$dissoc_in(m,p__36199){
-var vec__36200 = p__36199;
-var seq__36201 = cljs.core.seq(vec__36200);
-var first__36202 = cljs.core.first(seq__36201);
-var seq__36201__$1 = cljs.core.next(seq__36201);
-var k = first__36202;
-var ks = seq__36201__$1;
+day8.re_frame_10x.tools.coll.dissoc_in = (function day8$re_frame_10x$tools$coll$dissoc_in(m,p__36139){
+var vec__36140 = p__36139;
+var seq__36141 = cljs.core.seq(vec__36140);
+var first__36142 = cljs.core.first(seq__36141);
+var seq__36141__$1 = cljs.core.next(seq__36141);
+var k = first__36142;
+var ks = seq__36141__$1;
 if(ks){
 var temp__5802__auto__ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(m,k);
 if(cljs.core.truth_(temp__5802__auto__)){

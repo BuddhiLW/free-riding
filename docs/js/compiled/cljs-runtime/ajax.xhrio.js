@@ -1,47 +1,47 @@
 goog.provide('ajax.xhrio');
 (goog.net.XhrIo.prototype.ajax$protocols$AjaxImpl$ = cljs.core.PROTOCOL_SENTINEL);
 
-(goog.net.XhrIo.prototype.ajax$protocols$AjaxImpl$_js_ajax_request$arity$3 = (function (this$,p__47408,handler){
-var map__47409 = p__47408;
-var map__47409__$1 = cljs.core.__destructure_map(map__47409);
-var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47409__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
-var method = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47409__$1,new cljs.core.Keyword(null,"method","method",55703592));
-var body = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47409__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
-var headers = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47409__$1,new cljs.core.Keyword(null,"headers","headers",-835030129));
-var timeout = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__47409__$1,new cljs.core.Keyword(null,"timeout","timeout",-318625318),(0));
-var with_credentials = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__47409__$1,new cljs.core.Keyword(null,"with-credentials","with-credentials",-1163127235),false);
-var response_format = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47409__$1,new cljs.core.Keyword(null,"response-format","response-format",1664465322));
-var progress_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47409__$1,new cljs.core.Keyword(null,"progress-handler","progress-handler",333585589));
+(goog.net.XhrIo.prototype.ajax$protocols$AjaxImpl$_js_ajax_request$arity$3 = (function (this$,p__46572,handler){
+var map__46573 = p__46572;
+var map__46573__$1 = cljs.core.__destructure_map(map__46573);
+var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46573__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
+var method = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46573__$1,new cljs.core.Keyword(null,"method","method",55703592));
+var body = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46573__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
+var headers = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46573__$1,new cljs.core.Keyword(null,"headers","headers",-835030129));
+var timeout = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__46573__$1,new cljs.core.Keyword(null,"timeout","timeout",-318625318),(0));
+var with_credentials = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__46573__$1,new cljs.core.Keyword(null,"with-credentials","with-credentials",-1163127235),false);
+var response_format = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46573__$1,new cljs.core.Keyword(null,"response-format","response-format",1664465322));
+var progress_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46573__$1,new cljs.core.Keyword(null,"progress-handler","progress-handler",333585589));
 var this$__$1 = this;
-var temp__5804__auto___47439 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(response_format);
-if(cljs.core.truth_(temp__5804__auto___47439)){
-var response_type_47440 = temp__5804__auto___47439;
-this$__$1.setResponseType(cljs.core.name(response_type_47440));
+var temp__5804__auto___46604 = new cljs.core.Keyword(null,"type","type",1174270348).cljs$core$IFn$_invoke$arity$1(response_format);
+if(cljs.core.truth_(temp__5804__auto___46604)){
+var response_type_46605 = temp__5804__auto___46604;
+this$__$1.setResponseType(cljs.core.name(response_type_46605));
 } else {
 }
 
 if(cljs.core.fn_QMARK_(progress_handler)){
-var G__47412_47441 = this$__$1;
-G__47412_47441.setProgressEventsEnabled(true);
+var G__46577_46607 = this$__$1;
+G__46577_46607.setProgressEventsEnabled(true);
 
-goog.events.listen(G__47412_47441,goog.net.EventType.UPLOAD_PROGRESS,progress_handler);
+goog.events.listen(G__46577_46607,goog.net.EventType.UPLOAD_PROGRESS,progress_handler);
 
 } else {
 }
 
-var G__47413 = this$__$1;
-goog.events.listen(G__47413,goog.net.EventType.COMPLETE,(function (p1__47394_SHARP_){
-var G__47414 = p1__47394_SHARP_.target;
-return (handler.cljs$core$IFn$_invoke$arity$1 ? handler.cljs$core$IFn$_invoke$arity$1(G__47414) : handler.call(null,G__47414));
+var G__46579 = this$__$1;
+goog.events.listen(G__46579,goog.net.EventType.COMPLETE,(function (p1__46571_SHARP_){
+var G__46580 = p1__46571_SHARP_.target;
+return (handler.cljs$core$IFn$_invoke$arity$1 ? handler.cljs$core$IFn$_invoke$arity$1(G__46580) : handler.call(null,G__46580));
 }));
 
-G__47413.setTimeoutInterval(timeout);
+G__46579.setTimeoutInterval(timeout);
 
-G__47413.setWithCredentials(with_credentials);
+G__46579.setWithCredentials(with_credentials);
 
-G__47413.send(uri,method,body,cljs.core.clj__GT_js(headers));
+G__46579.send(uri,method,body,cljs.core.clj__GT_js(headers));
 
-return G__47413;
+return G__46579;
 }));
 
 (goog.net.XhrIo.prototype.ajax$protocols$AjaxRequest$ = cljs.core.PROTOCOL_SENTINEL);
@@ -84,24 +84,24 @@ return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(this$__$1.getLastErrorCode()
 }));
 (goog.net.XhrManager.prototype.ajax$protocols$AjaxImpl$ = cljs.core.PROTOCOL_SENTINEL);
 
-(goog.net.XhrManager.prototype.ajax$protocols$AjaxImpl$_js_ajax_request$arity$3 = (function (this$,p__47425,handler){
-var map__47426 = p__47425;
-var map__47426__$1 = cljs.core.__destructure_map(map__47426);
-var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47426__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
-var method = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47426__$1,new cljs.core.Keyword(null,"method","method",55703592));
-var body = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47426__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
-var headers = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47426__$1,new cljs.core.Keyword(null,"headers","headers",-835030129));
-var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47426__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
-var timeout = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__47426__$1,new cljs.core.Keyword(null,"timeout","timeout",-318625318),(0));
-var priority = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47426__$1,new cljs.core.Keyword(null,"priority","priority",1431093715));
-var max_retries = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__47426__$1,new cljs.core.Keyword(null,"max-retries","max-retries",-1933762121));
+(goog.net.XhrManager.prototype.ajax$protocols$AjaxImpl$_js_ajax_request$arity$3 = (function (this$,p__46592,handler){
+var map__46596 = p__46592;
+var map__46596__$1 = cljs.core.__destructure_map(map__46596);
+var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46596__$1,new cljs.core.Keyword(null,"uri","uri",-774711847));
+var method = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46596__$1,new cljs.core.Keyword(null,"method","method",55703592));
+var body = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46596__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
+var headers = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46596__$1,new cljs.core.Keyword(null,"headers","headers",-835030129));
+var id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46596__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var timeout = cljs.core.get.cljs$core$IFn$_invoke$arity$3(map__46596__$1,new cljs.core.Keyword(null,"timeout","timeout",-318625318),(0));
+var priority = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46596__$1,new cljs.core.Keyword(null,"priority","priority",1431093715));
+var max_retries = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__46596__$1,new cljs.core.Keyword(null,"max-retries","max-retries",-1933762121));
 var this$__$1 = this;
-var G__47427 = this$__$1;
-G__47427.setTimeoutInterval(timeout);
+var G__46597 = this$__$1;
+G__46597.setTimeoutInterval(timeout);
 
-G__47427.send(id,uri,method,body,cljs.core.clj__GT_js(headers),priority,handler,max_retries);
+G__46597.send(id,uri,method,body,cljs.core.clj__GT_js(headers),priority,handler,max_retries);
 
-return G__47427;
+return G__46597;
 }));
 
 //# sourceMappingURL=ajax.xhrio.js.map

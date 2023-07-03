@@ -7,8 +7,8 @@ goog.provide('devtools.toolbox');
  *   via disclosure triangle. The header can be styled and you can optionally specify preferred wrapping tag (advanced).
  */
 devtools.toolbox.envelope = (function devtools$toolbox$envelope(var_args){
-var G__31430 = arguments.length;
-switch (G__31430) {
+var G__32404 = arguments.length;
+switch (G__32404) {
 case 1:
 return devtools.toolbox.envelope.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -44,7 +44,7 @@ return devtools.toolbox.envelope.cljs$core$IFn$_invoke$arity$4(obj,header,style,
 }));
 
 (devtools.toolbox.envelope.cljs$core$IFn$_invoke$arity$4 = (function (obj,header,style,tag){
-if((typeof devtools !== 'undefined') && (typeof devtools.toolbox !== 'undefined') && (typeof devtools.toolbox.t_devtools$toolbox31447 !== 'undefined')){
+if((typeof devtools !== 'undefined') && (typeof devtools.toolbox !== 'undefined') && (typeof devtools.toolbox.t_devtools$toolbox32420 !== 'undefined')){
 } else {
 
 /**
@@ -53,69 +53,69 @@ if((typeof devtools !== 'undefined') && (typeof devtools.toolbox !== 'undefined'
  * @implements {cljs.core.IMeta}
  * @implements {cljs.core.IWithMeta}
 */
-devtools.toolbox.t_devtools$toolbox31447 = (function (obj,header,style,tag,meta31448){
+devtools.toolbox.t_devtools$toolbox32420 = (function (obj,header,style,tag,meta32421){
 this.obj = obj;
 this.header = header;
 this.style = style;
 this.tag = tag;
-this.meta31448 = meta31448;
+this.meta32421 = meta32421;
 this.cljs$lang$protocol_mask$partition0$ = 393216;
 this.cljs$lang$protocol_mask$partition1$ = 0;
 });
-(devtools.toolbox.t_devtools$toolbox31447.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_31449,meta31448__$1){
+(devtools.toolbox.t_devtools$toolbox32420.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (_32422,meta32421__$1){
 var self__ = this;
-var _31449__$1 = this;
-return (new devtools.toolbox.t_devtools$toolbox31447(self__.obj,self__.header,self__.style,self__.tag,meta31448__$1));
+var _32422__$1 = this;
+return (new devtools.toolbox.t_devtools$toolbox32420(self__.obj,self__.header,self__.style,self__.tag,meta32421__$1));
 }));
 
-(devtools.toolbox.t_devtools$toolbox31447.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_31449){
+(devtools.toolbox.t_devtools$toolbox32420.prototype.cljs$core$IMeta$_meta$arity$1 = (function (_32422){
 var self__ = this;
-var _31449__$1 = this;
-return self__.meta31448;
+var _32422__$1 = this;
+return self__.meta32421;
 }));
 
-(devtools.toolbox.t_devtools$toolbox31447.prototype.devtools$protocols$IFormat$ = cljs.core.PROTOCOL_SENTINEL);
+(devtools.toolbox.t_devtools$toolbox32420.prototype.devtools$protocols$IFormat$ = cljs.core.PROTOCOL_SENTINEL);
 
-(devtools.toolbox.t_devtools$toolbox31447.prototype.devtools$protocols$IFormat$_header$arity$1 = (function (_){
+(devtools.toolbox.t_devtools$toolbox32420.prototype.devtools$protocols$IFormat$_header$arity$1 = (function (_){
 var self__ = this;
 var ___$1 = this;
 return devtools.formatters.templating.render_markup(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [self__.tag,self__.style], null),((cljs.core.fn_QMARK_(self__.header))?(self__.header.cljs$core$IFn$_invoke$arity$1 ? self__.header.cljs$core$IFn$_invoke$arity$1(self__.obj) : self__.header.call(null,self__.obj)):self__.header)], null));
 }));
 
-(devtools.toolbox.t_devtools$toolbox31447.prototype.devtools$protocols$IFormat$_has_body$arity$1 = (function (_){
+(devtools.toolbox.t_devtools$toolbox32420.prototype.devtools$protocols$IFormat$_has_body$arity$1 = (function (_){
 var self__ = this;
 var ___$1 = this;
 return true;
 }));
 
-(devtools.toolbox.t_devtools$toolbox31447.prototype.devtools$protocols$IFormat$_body$arity$1 = (function (_){
+(devtools.toolbox.t_devtools$toolbox32420.prototype.devtools$protocols$IFormat$_body$arity$1 = (function (_){
 var self__ = this;
 var ___$1 = this;
 return devtools.formatters.templating.render_markup(devtools.formatters.markup._LT_body_GT_(devtools.formatters.markup._LT_standard_body_reference_GT_(self__.obj)));
 }));
 
-(devtools.toolbox.t_devtools$toolbox31447.getBasis = (function (){
-return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"obj","obj",-1672671807,null),new cljs.core.Symbol(null,"header","header",1759972661,null),new cljs.core.Symbol(null,"style","style",1143888791,null),new cljs.core.Symbol(null,"tag","tag",350170304,null),new cljs.core.Symbol(null,"meta31448","meta31448",-589127262,null)], null);
+(devtools.toolbox.t_devtools$toolbox32420.getBasis = (function (){
+return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Symbol(null,"obj","obj",-1672671807,null),new cljs.core.Symbol(null,"header","header",1759972661,null),new cljs.core.Symbol(null,"style","style",1143888791,null),new cljs.core.Symbol(null,"tag","tag",350170304,null),new cljs.core.Symbol(null,"meta32421","meta32421",836241054,null)], null);
 }));
 
-(devtools.toolbox.t_devtools$toolbox31447.cljs$lang$type = true);
+(devtools.toolbox.t_devtools$toolbox32420.cljs$lang$type = true);
 
-(devtools.toolbox.t_devtools$toolbox31447.cljs$lang$ctorStr = "devtools.toolbox/t_devtools$toolbox31447");
+(devtools.toolbox.t_devtools$toolbox32420.cljs$lang$ctorStr = "devtools.toolbox/t_devtools$toolbox32420");
 
-(devtools.toolbox.t_devtools$toolbox31447.cljs$lang$ctorPrWriter = (function (this__5330__auto__,writer__5331__auto__,opt__5332__auto__){
-return cljs.core._write(writer__5331__auto__,"devtools.toolbox/t_devtools$toolbox31447");
+(devtools.toolbox.t_devtools$toolbox32420.cljs$lang$ctorPrWriter = (function (this__5330__auto__,writer__5331__auto__,opt__5332__auto__){
+return cljs.core._write(writer__5331__auto__,"devtools.toolbox/t_devtools$toolbox32420");
 }));
 
 /**
- * Positional factory function for devtools.toolbox/t_devtools$toolbox31447.
+ * Positional factory function for devtools.toolbox/t_devtools$toolbox32420.
  */
-devtools.toolbox.__GT_t_devtools$toolbox31447 = (function devtools$toolbox$__GT_t_devtools$toolbox31447(obj__$1,header__$1,style__$1,tag__$1,meta31448){
-return (new devtools.toolbox.t_devtools$toolbox31447(obj__$1,header__$1,style__$1,tag__$1,meta31448));
+devtools.toolbox.__GT_t_devtools$toolbox32420 = (function devtools$toolbox$__GT_t_devtools$toolbox32420(obj__$1,header__$1,style__$1,tag__$1,meta32421){
+return (new devtools.toolbox.t_devtools$toolbox32420(obj__$1,header__$1,style__$1,tag__$1,meta32421));
 });
 
 }
 
-return (new devtools.toolbox.t_devtools$toolbox31447(obj,header,style,tag,cljs.core.PersistentArrayMap.EMPTY));
+return (new devtools.toolbox.t_devtools$toolbox32420(obj,header,style,tag,cljs.core.PersistentArrayMap.EMPTY));
 }));
 
 (devtools.toolbox.envelope.cljs$lang$maxFixedArity = 4);

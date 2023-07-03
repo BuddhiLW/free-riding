@@ -17,10 +17,10 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(obj,new cljs.core.Keyword(n
 }));
 });
 day8.re_frame_10x.inlined_deps.spade.git_sha_93ef290.container.dom.inject_BANG_ = (function day8$re_frame_10x$inlined_deps$spade$git_sha_93ef290$container$dom$inject_BANG_(target_dom,styles_container,id,css){
-var element = (function (){var G__32684 = document.createElement("style");
-G__32684.setAttribute("spade-id",cljs.core.str.cljs$core$IFn$_invoke$arity$1(id));
+var element = (function (){var G__32192 = document.createElement("style");
+G__32192.setAttribute("spade-id",cljs.core.str.cljs$core$IFn$_invoke$arity$1(id));
 
-return G__32684;
+return G__32192;
 })();
 var obj = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"element","element",1974019749),element,new cljs.core.Keyword(null,"source","source",-433931539),css,new cljs.core.Keyword(null,"id","id",-1388402092),id], null);
 if((!((target_dom == null)))){
@@ -104,8 +104,8 @@ return (new day8.re_frame_10x.inlined_deps.spade.git_sha_93ef290.container.dom.D
  * may use the 3-arity version and provide an atom.
  */
 day8.re_frame_10x.inlined_deps.spade.git_sha_93ef290.container.dom.create_container = (function day8$re_frame_10x$inlined_deps$spade$git_sha_93ef290$container$dom$create_container(var_args){
-var G__32689 = arguments.length;
-switch (G__32689) {
+var G__32235 = arguments.length;
+switch (G__32235) {
 case 0:
 return day8.re_frame_10x.inlined_deps.spade.git_sha_93ef290.container.dom.create_container.cljs$core$IFn$_invoke$arity$0();
 

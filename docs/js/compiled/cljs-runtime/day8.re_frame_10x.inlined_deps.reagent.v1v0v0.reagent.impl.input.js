@@ -3,10 +3,10 @@ day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.these_inputs_ha
 day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.has_selection_api_QMARK_ = (function day8$re_frame_10x$inlined_deps$reagent$v1v0v0$reagent$impl$input$has_selection_api_QMARK_(input_type){
 return cljs.core.contains_QMARK_(day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.these_inputs_have_selection_api,input_type);
 });
-day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.input_node_set_value = (function day8$re_frame_10x$inlined_deps$reagent$v1v0v0$reagent$impl$input$input_node_set_value(node,rendered_value,dom_value,component,p__31857){
-var map__31858 = p__31857;
-var map__31858__$1 = cljs.core.__destructure_map(map__31858);
-var on_write = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__31858__$1,new cljs.core.Keyword(null,"on-write","on-write",31519475));
+day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.input_node_set_value = (function day8$re_frame_10x$inlined_deps$reagent$v1v0v0$reagent$impl$input$input_node_set_value(node,rendered_value,dom_value,component,p__29951){
+var map__29954 = p__29951;
+var map__29954__$1 = cljs.core.__destructure_map(map__29954);
+var on_write = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__29954__$1,new cljs.core.Keyword(null,"on-write","on-write",31519475));
 if((!((((node === document.activeElement)) && (((day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.has_selection_api_QMARK_(node.type)) && (((typeof rendered_value === 'string') && (typeof dom_value === 'string'))))))))){
 (component.cljsDOMValue = rendered_value);
 
@@ -123,8 +123,8 @@ delete jsprops["value"];
 
 (jsprops.defaultValue = value);
 
-(jsprops.onChange = (function (p1__31869_SHARP_){
-return day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.input_handle_change(this$,on_change,p1__31869_SHARP_);
+(jsprops.onChange = (function (p1__29997_SHARP_){
+return day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.input_handle_change(this$,on_change,p1__29997_SHARP_);
 }));
 
 return (jsprops.ref = this$.reagentRefFn);
@@ -136,8 +136,8 @@ day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.input_unmount =
 return (this$.cljsInputLive = null);
 });
 day8.re_frame_10x.inlined_deps.reagent.v1v0v0.reagent.impl.input.input_component_QMARK_ = (function day8$re_frame_10x$inlined_deps$reagent$v1v0v0$reagent$impl$input$input_component_QMARK_(x){
-var G__31871 = x;
-switch (G__31871) {
+var G__30021 = x;
+switch (G__30021) {
 case "input":
 case "textarea":
 return true;

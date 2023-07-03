@@ -19,6 +19,7 @@
  :article/fetch-url
  (fn [{:keys [db]} [_ {:keys [url]}]]
    (js/console.log "fetching url: " (str lynx-endpoint "/free-riding/" (js/encodeURIComponent url)))
+   (js/console.log "fetching url (should be): " (str "http://161.35.96.204:8181" "/free-riding/" (js/encodeURIComponent url)))
    {:db (assoc-in db [:article :url] url)
     :http-xhrio {:method          :get
                  :uri             (str lynx-endpoint "/free-riding/" (js/encodeURIComponent url))

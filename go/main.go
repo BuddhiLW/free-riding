@@ -22,7 +22,7 @@ func Lynx(ctx *fasthttp.RequestCtx) {
 
 	fmt.Fprintf(ctx, "URL: %s\n", urlparsed)
 
-	cmd := exec.Command("lynx", "--dump", urlparsed)
+	cmd := exec.Command("lynx", "--dump", "-assume_charset=utf-8", "--display_charset=utf-8", urlparsed)
 	stdout, err := cmd.Output()
 
 	if err != nil {

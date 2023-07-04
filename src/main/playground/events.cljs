@@ -5,7 +5,7 @@
    [playground.db :refer [db]]
    [re-frame.core :as rf]))
 
-(def lynx-endpoint "http://164.90.253.190:8181")
+(def lynx-endpoint "http://localhost:8181")
 
 (rf/reg-event-db
  :prod/inicialize-db

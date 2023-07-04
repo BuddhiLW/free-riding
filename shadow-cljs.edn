@@ -1,5 +1,5 @@
 {:deps true
- :dev-http {8000 ["docs" "resources"]}
+ :dev-http {8666 ["docs" "resources"]}
  :js-options {:js-package-dirs ["node_modules"]}
  :builds {:app
           {:target :browser

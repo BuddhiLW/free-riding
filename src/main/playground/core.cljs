@@ -13,12 +13,12 @@
 
 (defn title
   []
-  [:> Box {:position "relative"
-           :border-radius "12px"
+  [:> Grid {:position "relative"
+            :border-radius "12px"
            ;; :width 400
-           :mb 3}
+            :mb 3}
    [:> Box {:sx {:width "100 vw"
-                 :height 50
+                 ;; :height
                  :display "flex"
                  :align-items "center"
                  :justify-content "center"
@@ -28,7 +28,10 @@
             :my "auto"}
     [:> Typography
      {:variant "h5"}
-     "Read your article, with the power of Lynx!"]]])
+     [:p
+      "Read your news article..."]
+     [:p
+      "Provided by " [:b "Lynx!"]]]]])
 
 (defn upload-file-page
   []
@@ -67,24 +70,36 @@
                         :inline-size "50vw"
                         :overflow-wrap "break-word"
                         :overflow-y "scroll"}
-
-                   ;; :sx {:min-width "70vw"
-                   ;;      :margin "auto"
-                   ;;      :mb "2em"}
                    :sm {:min-width "90vw"}
                    :md {:min-width "80vw"}
-                   :lg {:min-width "60vw"}
-                   :class-name "overflow-hidden overflow-y-auto"}
-
-          [:> Grid {:container true
-                    :direction "column"
-                    :align-items "center"
-                    :justify-content "center"
-                    :sx {:mb "10em"}}
-           [:> Box {:sx {:inline-size "45vw"
-                         :word-break "break-all"}}
-            [:pre
-             text]]]]]))))
+                   :lg {:min-width "60vw"}}
+          [:> Grid
+           {:container true
+            :direction "column"
+            :align-items "left"
+            :justify-content "left"
+            :max-width "95vw"
+            :sx {:min-width "95vw"
+                 :height "65vh"
+                 :margin "auto"
+                 :mb "2em"
+                 :word-break "break-all"
+                 :inline-size "50vw"
+                 :overflow-wrap "break-word"
+                 :overflow-y "scroll"}
+            :sm {:min-width "90vw"}
+            :md {:min-width "80vw"}
+            :lg {:min-width "60vw"}
+            :class-name "article-text"}
+           [:> Box
+            [:> Typography {:align "left"
+                            :font-size "1em"}
+             [:pre.article-text
+              {:style {:white-space "pre-wrap"
+                       :word-break "break-all"
+                       :overflow-wrap "break-word"
+                       :max-width "100%"}}
+              text]]]]]]))))
 
 (defn- main []
   [:main.container.mx-auto.pt-5

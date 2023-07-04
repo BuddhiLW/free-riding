@@ -10,7 +10,9 @@ import (
 )
 
 func Lynx(ctx *fasthttp.RequestCtx) {
-	ctx.Response.Header.Set("Access-Control-Allow-Origin", "http://localhost:8666")
+	ctx.Response.Header.Set("Access-Control-Allow-Origin", "http://buddhilw.free-riding.cloud")
+	ctx.Response.Header.Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	ctx.Response.Header.Set("Access-Control-Request-Private-Network", "true")
 	var urlstring string = ctx.UserValue("url").(string)
 	urlparsed, err := url.QueryUnescape(urlstring)
 

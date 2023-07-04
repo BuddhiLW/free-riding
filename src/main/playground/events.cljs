@@ -5,7 +5,7 @@
    [playground.db :refer [db]]
    [re-frame.core :as rf]))
 
-(def lynx-endpoint "http://localhost:8181")
+(def lynx-endpoint "http://buddhilw.free-riding.cloud")
 
 (rf/reg-event-db
  :prod/inicialize-db
@@ -19,7 +19,7 @@
  :article/fetch-url
  (fn [{:keys [db]} [_ {:keys [url]}]]
    (js/console.log "fetching url: " (str lynx-endpoint "/free-riding/" (js/encodeURIComponent url)))
-   (js/console.log "fetching url (should be): " (str "http://161.35.96.204:8181" "/free-riding/" (js/encodeURIComponent url)))
+   (js/console.log "fetching url (should be): " (str "http://buddhilw.free-riding.cloud" "/free-riding/" (js/encodeURIComponent url)))
    {:db (assoc-in db [:article :url] url)
     :http-xhrio {:method          :get
                  :uri             (str lynx-endpoint "/free-riding/" (js/encodeURIComponent url))

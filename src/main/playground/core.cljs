@@ -44,9 +44,12 @@
           "Free your pay-wall"]
          [:> Grid
           {:container true
-           :sx {:width "50vw"
+           :sx {:min-width "70vw"
                 :margin "auto"
-                :mb "2em"}}
+                :mb "2em"}
+           :sm {:min-width "90vw"}
+           :md {:min-width "80vw"}
+           :lg {:min-width "60vw"}}
           [form-group {:id :url
                        :label "Website url:"
                        :type "text"
@@ -57,13 +60,20 @@
            "Fetch article"]]
 
          [title]
-         [:> Card {:sx {:width "60vw"
-                        :height "60vh"
+         [:> Card {:sx {:min-width "95vw"
+                        :height "65vh"
                         :margin "auto"
                         :mb "2em"
                         :inline-size "50vw"
                         :overflow-wrap "break-word"
                         :overflow-y "scroll"}
+
+                   ;; :sx {:min-width "70vw"
+                   ;;      :margin "auto"
+                   ;;      :mb "2em"}
+                   :sm {:min-width "90vw"}
+                   :md {:min-width "80vw"}
+                   :lg {:min-width "60vw"}
                    :class-name "overflow-hidden overflow-y-auto"}
 
           [:> Grid {:container true

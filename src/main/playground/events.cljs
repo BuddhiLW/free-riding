@@ -40,4 +40,3 @@
    (js/console.error "error: " request-type ": " response)
    (-> db
        (assoc-in [:errors request-type] (get response :status-text)))))
-
